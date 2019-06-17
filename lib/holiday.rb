@@ -13,3 +13,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
   holiday_hash[season][holiday_name] = supply_array
   holiday_hash
 end
+def add_new_season_and_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
+  holiday_hash[season] = {holiday_name => supply_array} # the new echelon being created is to the left of the equals sign.
+  holiday_hash
+end
