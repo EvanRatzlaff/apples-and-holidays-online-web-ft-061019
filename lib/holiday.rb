@@ -17,3 +17,12 @@ def add_new_season_and_holiday_with_supplies(holiday_hash, season, holiday_name,
   holiday_hash[season] = {holiday_name => supply_array} # the new echelon being created is to the left of the equals sign.
   holiday_hash
 end
+def all_holidays_with_bbq(holiday_hash)
+  # return an array of holiday names (as symbols) where supply lists
+  # include the string "BBQ"
+  holiday_hash.map do |season, holiday|
+    holiday.map do |holiday, item|
+      holiday if item.include?("BBQ")
+    end 
+  end.flatten.compact
+end
