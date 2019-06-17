@@ -4,15 +4,7 @@ def add_supply_to_winter_holidays(holiday_hash, item)
   end
 end
 
-# My alternative
-def add_supply_to_winter_holidays(holiday_hash, item)
- holiday_hash[:winter].each do |holiday, decorations|
-   decorations.push(item)
-  end
-end
 
-
-add_supply_to_winter_holidays(holiday_supplies, "Baloons")
 
 # This will not word because the sub-hashes are not somple array-string values
 #def add_supply_to_winter_holidays(holiday_hash, supply)
